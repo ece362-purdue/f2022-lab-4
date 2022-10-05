@@ -3,6 +3,11 @@
 
 #include <stdint.h>
 
+// Assume that only the LSB of the 64-bit values
+// are used to store the value of the control signal.
+// Since this is a C-simulator and not a real piece of hardware
+// wasting space on making all the types 64-bits is not a important
+// but lets us keep the software flexible.
 struct ControlSignals {
   uint64_t Reg2Loc;
   uint64_t Branch;
